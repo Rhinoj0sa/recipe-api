@@ -6,6 +6,7 @@ from django.test import TestCase
 from django.contrib.auth import get_user_model
 from core import models
 
+
 class ModelTests(TestCase):
     """Test models."""
 
@@ -50,7 +51,7 @@ class ModelTests(TestCase):
 
     def test_create_recipe(self):
         """Test creating a recipe."""
-        user=get_user_model().objects.create_user(
+        user = get_user_model().objects.create_user(
             "test@example.com",
             "test123",
         )
