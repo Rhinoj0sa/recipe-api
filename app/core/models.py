@@ -22,9 +22,9 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    # def normalize_email(self, email):
-    #     """Normalize email address."""
-    #     return email.lower()
+    def normalize_email(self, email):
+        """Normalize email address."""
+        return email.lower()
 
     def create_superuser(self, email, password):
         """Create and return a new superuser."""
